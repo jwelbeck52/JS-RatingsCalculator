@@ -15,7 +15,6 @@ elements.forEach(element => {
     ratings.count += parseInt(element.value);
     
     ratings.sum += (rating * parseInt(element.value));
-    console.log(`sum of ratings is ${ratings.sum}`);
 });
 
     if (ratings.count !=0){
@@ -27,8 +26,7 @@ elements.forEach(element => {
 
 document.addEventListener("change", () => { 
     const ratings = collect_ratings();
-    average_output = document.querySelector("#average");
-    average_output.value = ratings.average.toFixed(2);
+    document.querySelector("#average").value = ratings.average.toFixed(2);
 });
 
 
